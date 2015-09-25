@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listado de Noticias</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Descripcion</th>
+      <th>Estatus</th>
+      <th>Fecha</th>
+      <th>Categoria</th>
+      <th>Relevancia</th>
+      <th>Agrupador</th>
+      <th>Idioma</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @noticia.each do |noticium| %>
+      <tr>
+        <td><%= noticium.titulo %></td>
+        <td><%= noticium.descripcion %></td>
+        <td><%= noticium.estatus %></td>
+        <td><%= noticium.fecha %></td>
+        <td><%= noticium.categoria %></td>
+        <td><%= noticium.relevancia %></td>
+        <td><%= noticium.agrupador_id %></td>
+        <td><%= noticium.idioma_id %></td>
+        <td><%= link_to 'Detalles', noticium %></td>
+        <td><%= link_to 'Editar', edit_noticium_path(noticium) %></td>
+        <td><%= link_to 'Eliminar', noticium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nueva Noticia', new_noticium_path %>

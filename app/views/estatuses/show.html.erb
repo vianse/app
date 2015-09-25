@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @estatus.titulo %>
+</p>
+
+<%= link_to 'Editar', edit_estatus_path(@estatus) %> |
+<%= link_to 'Regresar', estatuses_path %>

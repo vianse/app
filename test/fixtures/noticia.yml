@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  titulo: MyString
+  descripcion: MyText
+  estatus_id: 
+  fecha: 2015-09-23
+  categoria_id: 
+  relevancia: MyString
+  link: MyString
+  agrupador_id: 
+
+two:
+  titulo: MyString
+  descripcion: MyText
+  estatus_id: 
+  fecha: 2015-09-23
+  categoria_id: 
+  relevancia: MyString
+  link: MyString
+  agrupador_id: 

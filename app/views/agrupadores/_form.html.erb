@@ -1,0 +1,25 @@
+<%= form_for(@agrupadore) do |f| %>
+  <% if @agrupadore.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@agrupadore.errors.count, "error") %> prohibited this agrupadore from being saved:</h2>
+
+      <ul>
+      <% @agrupadore.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :titulo %><br>
+    <%= f.text_field :titulo %>
+  </div>
+  <div class="field">
+    <%= f.label :idioma_id %><br>
+    <%= f.collection_select :idioma_id, Idioma.order(:titulo), :id, :titulo, {:prompt=>"Selecciona un Idioma"}, {:class=>'form-control'} %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Guardar" %>
+  </div>
+<% end %>

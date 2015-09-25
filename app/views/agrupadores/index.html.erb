@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lista de Agrupadores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @agrupadores.each do |agrupadore| %>
+      <tr>
+        <td><%= agrupadore.titulo %></td>
+        <td><%= agrupadore.idioma_id %></td>
+        <td><%= link_to 'Show', agrupadore %></td>
+        <td><%= link_to 'Edit', edit_agrupadore_path(agrupadore) %></td>
+        <td><%= link_to 'Destroy', agrupadore, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo Agrupador', new_agrupadore_path %>
