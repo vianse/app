@@ -29,6 +29,11 @@ gem 'rmagick'
 gem 'aws-sdk', '~> 1.5.7' #amazon S3 storage for paperclip
 gem "paperclip", '~> 4.1'
 
+group :production do 
+	gem 'pg'
+	gem 'rails_12factor'
+end 
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
