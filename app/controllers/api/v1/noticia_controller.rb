@@ -37,11 +37,11 @@ class Api::V1::NoticiaController < ApplicationController
 		  	@categoria = Categoria.where(:id => @noti).pluck(:titulo)
 		  	@idioma    = Idioma.where(:id => params[:lang]).pluck(:titulo)
 		    { 
-		     :group => @agrupador[0],
-		     :category => @categoria[0],
-		     :legend => "Ha habido #{v} #{@agrupador[0]}",
-		     :group_id => @agrupador_id[0],
-		     :lang => @idioma[0]
+		     :grupo => @agrupador[0],
+		     :categoria => @categoria[0],
+		     :leyenda => "Ha habido #{v} #{@agrupador[0]}",
+		     :grupo_id => @agrupador_id[0],
+		     :idioma => @idioma[0]
 		     }
 		  end
 		  elementos.to_json
