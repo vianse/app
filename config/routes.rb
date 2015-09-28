@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :likes
   resources :idiomas
   resources :noticia
   resources :agrupadores
@@ -10,6 +11,7 @@ Rails.application.routes.draw do
   namespace :v1 do 
     resources :noticia, path: "/news"
     resources :app
+    resources :like , path: "/like"
   end
  end
 

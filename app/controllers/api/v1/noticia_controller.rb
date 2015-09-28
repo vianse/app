@@ -9,7 +9,7 @@ class Api::V1::NoticiaController < ApplicationController
 					message: "Los parametros group e idioma no puede estar vacio"
 				}.to_json
 			else
-				@noticias = Noticia.select("titulo","descripcion","estatus_id","fecha","categoria_id","relevancia","agrupador_id","file_file_name","idioma_id").where(:agrupador_id => params[:group]).where(:idioma_id => params[:lang])
+				@noticias = Noticia.select("id","titulo","descripcion","file_file_name").where(:agrupador_id => params[:group]).where(:idioma_id => params[:lang])
 				render :json => @noticias
 				#render :json => @noticias
 			end
